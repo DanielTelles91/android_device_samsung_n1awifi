@@ -18,16 +18,11 @@
 # Common Android Go configurations
 $(call inherit-product, build/target/product/go_defaults.mk)
 
-# Dalvik (2 GB configuration)
-$(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
-
 # Dexpreopt
 WITH_DEXPREOPT_DEBUG_INFO := false
 
 # The target has no boot jars to check
 SKIP_BOOT_JARS_CHECK := true
-
-
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
@@ -36,7 +31,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/samsung/n1awifi/device.mk)
 
 # Inherit some common lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/lineage/config/common_full_go_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := n1awifi

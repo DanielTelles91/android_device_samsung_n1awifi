@@ -34,3 +34,9 @@ $(call inherit-product, device/samsung/n1a-common/device-common.mk)
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/samsung/n1awifi/n1awifi-vendor.mk)
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-full-v29.so \
+    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-v29.so
+
+PRODUCT_PACKAGES += android.hardware.radio.config@1.0-service

@@ -16,13 +16,13 @@
 #
 
 # Common Android Go configurations
-$(call inherit-product, build/target/product/go_defaults.mk)
+#$(call inherit-product, build/target/product/go_defaults.mk)
 
 # Dexpreopt
-WITH_DEXPREOPT_DEBUG_INFO := false
+#WITH_DEXPREOPT_DEBUG_INFO := false
 
 # The target has no boot jars to check
-SKIP_BOOT_JARS_CHECK := true
+#SKIP_BOOT_JARS_CHECK := true
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
